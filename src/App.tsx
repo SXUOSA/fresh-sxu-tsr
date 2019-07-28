@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserHistory } from "history";
+import { Router, Route } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import Index from './pages/index';
+import Info from './pages/info';
+import './index.css';
+
+const browserHistory = createBrowserHistory();
+const setFontBase = ():void => {
+  let windowWidth = document.documentElement.clientWidth;
+  document.getElementsByTagName('html')[0].style.fontSize = windowWidth / 10 + 'px';
+};
+
+window.addEventListener('resize', ():void => {
+  setFontBase();  
+});
+
+window.onload = ():void => {
+  setFontBase();
+};
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router history={browserHistory}>
+        <Route path="/" component={Index} exact/>
+        <Route path="/info" component={Info} exact/>
+      </Router>
     </div>
   );
 }
