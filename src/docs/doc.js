@@ -3,7 +3,7 @@ export default [
         title: '1',
         imgUrl: '',
         children: {
-            '1-1': '123',
+            '1-1': `# nihao`,
             '1-2': '123'
         }
     },

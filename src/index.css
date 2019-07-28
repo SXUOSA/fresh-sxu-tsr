@@ -63,6 +63,46 @@ body {
   transition: all .5s;
 }
 
+.fresh-sxu-menu-wrap {
+  background: url(http://bkzs.sxu.edu.cn/images/2019-07/12a1c1d5b5684c9d8c204acfc7705707.jpg);
+  background-position: center;
+  background-size: 190% 100%; 
+  width: 100%;
+  height: 100%;
+}
+
+.fresh-sxu-menu-wrap ul {
+  margin-top: 0px;
+  text-align: center;
+  padding-left: 0px;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fresh-sxu-menu-wrap h1 {
+  font-size: 1rem;
+  word-spacing: 0.3rem;
+  color: white;
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  margin-top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fresh-sxu-menu-wrap li {
+  list-style: none;
+  width: 4rem;
+  border: 2px solid white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  line-height: 1.4rem;
+}
+
 .fresh-sxu-content  {
   font-size: .2rem;
   padding: .3rem;
@@ -71,13 +111,16 @@ body {
 .fade-enter {
   opacity: 0;
 }
+
 .fade-active {
   opacity: 1;
   transition: opacity 200ms;
 }
+
 .fade-exit {
   opacity: 1;
 }
+
 .fade-active {
   opacity: 0;
   transition: opacity 200ms;

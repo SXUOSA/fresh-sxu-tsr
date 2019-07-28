@@ -15,15 +15,18 @@ const Menu:React.FC<RouterProps> = props => {
     };
 
     return (
-        <div className={'fresh-sxu-menu-wrap'}>
-            <ul>
-                {
-                    Doc.map((doc: Doc, index: number) => {
-                        return <li onClick={e => handleClick(e, index)}>{doc.title}</li>
-                    })
-                }
-            </ul>
-        </div>
+        <>
+            <div className={'fresh-sxu-menu-wrap'}>
+                <h1 style={{textAlign:'center'}}>导 航</h1>
+                <ul>
+                    {
+                        Doc.map((doc: Doc, index: number) => {
+                            return <li onClick={e => handleClick(e, index)}>{doc.title}</li>
+                        })
+                    }
+                </ul>
+            </div>
+        </>
     )
 };
 

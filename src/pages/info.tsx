@@ -6,6 +6,8 @@ import HeadInfo from './components/headInfo';
 import Doc from '../docs/doc';
 import { RouterProps } from '_@types_react-router@5.0.3@@types/react-router';
 
+const markdown = require('markdown');
+
 interface InfoProps {
     docTitle: string
 }
@@ -25,8 +27,6 @@ const getParamsFromQuery:(query:string, aim:string) => string = (query:string, a
     });
     return result[aim];
 };
-
-const markdown = require('markdown');
 
 const InfoPage:React.FC<InfoProps & RouterProps> = props => {
     let docs:[string, string][] = Doc[parseInt(getParamsFromQuery(window.location.search, 'index'))]['children'] as unknown as [string, string][];

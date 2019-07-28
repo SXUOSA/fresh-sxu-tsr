@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { RouterProps } from '_@types_react-router@5.0.3@@types/react-router';
-import HeadNav from './components/headNav';
 
 const IndexPage:React.FC<RouterProps> = props => {
     return (        
@@ -26,7 +25,7 @@ const IndexPage:React.FC<RouterProps> = props => {
                     height: '5rem'
                 }} src="http://bkzs.sxu.edu.cn/images/2019-07/25bf5b5aabbd4037857b86811838ec62.png" alt=""/>
             </div>
-            <button className={'openHandBook'} onClick={() => {props.history.push('/info')}}>打开手册</button>
+            <button className={'openHandBook'} onClick={() => {props.history.push('/menu')}}>打开手册</button>
         </div>
     )
 }
