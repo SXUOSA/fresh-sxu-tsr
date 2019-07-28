@@ -43,6 +43,31 @@ body {
   height: 1rem;
 }
 
+.fresh-sxu-headNav button{
+  color: grey;
+  font-size: 0.4rem;
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.fresh-sxu-headNav {
+  display: flex;
+  height: 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#selectedTab {
+  color: black;
+  font-size: 0.5rem;
+  transition: all .5s;
+}
+
+.fresh-sxu-content  {
+  font-size: .2rem;
+  padding: .3rem;
+}
+
 .fade-enter {
   opacity: 0;
 }
