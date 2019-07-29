@@ -57,6 +57,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.fresh-sxu-headNav button {
+  border: none;
+  background: transparent;
+}
+
 #selectedTab {
   color: black;
   font-size: 0.5rem;
@@ -106,6 +111,11 @@ body {
 .fresh-sxu-content  {
   font-size: .2rem;
   padding: .3rem;
+}
+
+.fresh-sxu-content-wrap button {
+  border: none;
+  background: transparent;
 }
 
 .fade-enter {

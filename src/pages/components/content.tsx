@@ -9,7 +9,9 @@ interface ContentProps {
 
 const Content:React.FC<Partial<ContentProps>> = props => {
     return (
-        <div>
+        <div style={{
+            minHeight: '1200px'
+        }}>
             <div className={"fresh-sxu-content"} dangerouslySetInnerHTML={{__html:props.contentHtml?props.contentHtml:"<div></div>"}}></div>
             {props.showNextPage?<button onClick={props.onNextPage}>{props.nextPage}</button>:null}
         </div>

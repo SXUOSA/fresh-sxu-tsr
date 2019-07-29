@@ -6,7 +6,7 @@ import HeadInfo from './components/headInfo';
 import Doc from '../docs/doc';
 import { RouterProps } from '_@types_react-router@5.0.3@@types/react-router';
 
-const markdown = require('markdown');
+const markdown = require('markdown').markdown;
 
 interface InfoProps {
     docTitle: string
@@ -31,7 +31,7 @@ const getParamsFromQuery:(query:string, aim:string) => string = (query:string, a
 const InfoPage:React.FC<InfoProps & RouterProps> = props => {
     let docs:[string, string][] = Doc[parseInt(getParamsFromQuery(window.location.search, 'index'))]['children'] as unknown as [string, string][];
     docs = (Object.entries(docs) as unknown as [string, string][]);
-    const [content, setContent] = useState<string>(markdown.parse(docs[0][1]));
+    const [content, setContent] = useState<string>(markdown.toHTML(docs[0][1]));
     const [selectTab, setSelectTab] = useState<string>(docs[0][0]);
     const [tabs, setTabs] = useState<string[]>(():string[] => {
         return docs.map(doc => {
@@ -42,14 +42,21 @@ const InfoPage:React.FC<InfoProps & RouterProps> = props => {
     const findDoc = (tab:string) => {
         for (let i = 0; i < docs.length; i++) {
             if (docs[i][0] === tab) {
-                return docs[1];
+                return docs[i][1];
             }
+        }
+    }
+
+    window.onscroll = function () {
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+        if (t === 0) {
+            props.history.push('/menu');
         }
     }
 
     const headNavClick = (e: React.MouseEvent, tab: string) => {
         setSelectTab(tab);
-        setContent(markdown.parse(findDoc(tab)));
+        setContent(markdown.toHTML(findDoc(tab)));
     };
 
     const handleNextPage = () => {};
@@ -60,7 +67,7 @@ const InfoPage:React.FC<InfoProps & RouterProps> = props => {
             <HeadNav tabs={tabs}
                      selectedTab={selectTab}
                      onClick={(e:React.MouseEvent, tab:string) => {headNavClick(e, tab)}}/>
-            <Content contentHtml={content} onNextPage={handleNextPage} showNextPage={true} nextPage={"我是下一页"}/>
+            <Content key={selectTab} contentHtml={content} onNextPage={handleNextPage} showNextPage={false} nextPage={"我是下一页"}/>
         </div>
     )
 }
