@@ -43,7 +43,7 @@ body {
   height: 1rem;
 }
 
-.fresh-sxu-headNav button{
+.fresh-sxu-headNav button {
   color: grey;
   font-size: 0.4rem;
   width: 4rem;
@@ -71,7 +71,7 @@ body {
 .fresh-sxu-menu-wrap {
   background: url(http://bkzs.sxu.edu.cn/images/2019-07/12a1c1d5b5684c9d8c204acfc7705707.jpg);
   background-position: center;
-  background-size: 190% 100%; 
+  background-size: 190% 100%;
   width: 100%;
   height: 100%;
 }
@@ -108,7 +108,7 @@ body {
   line-height: 1.4rem;
 }
 
-.fresh-sxu-content  {
+.fresh-sxu-content {
   font-size: .2rem;
   padding: .3rem;
 }
@@ -134,4 +134,8 @@ body {
 .fade-active {
   opacity: 0;
   transition: opacity 200ms;
+}
+
+.text-content {
+  /* text-align: center; */
 }

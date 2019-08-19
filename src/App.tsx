@@ -14,7 +14,7 @@ const setFontBase = ():void => {
 };
 
 window.addEventListener('resize', ():void => {
-  setFontBase();  
+  setFontBase(); 
 });
 
 window.onload = ():void => {

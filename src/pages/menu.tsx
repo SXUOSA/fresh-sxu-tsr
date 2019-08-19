@@ -17,7 +17,7 @@ const Menu:React.FC<RouterProps> = props => {
     return (
         <>
             <div className={'fresh-sxu-menu-wrap'}>
-                <h1 style={{textAlign:'center'}}>导 航</h1>
+                {/* <h1 style={{textAlign:'center'}}>导 航</h1> */}
                 <ul>
                     {
                         Doc.map((doc: Doc, index: number) => {
