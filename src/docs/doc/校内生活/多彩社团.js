@@ -1,3 +1,5 @@
+export default `
+
 ## 开源软件协会
 
 嘿，这里是山西大学校园内最大的计算机技术社团之一——开源软件协会，你是否想象过自己帅气的操控计算机的样子呢？你是否有过一个当Geek或者Hacker的梦想呢？
@@ -183,3 +185,4 @@
 ![](http://bkzs.sxu.edu.cn/images/2019-07/6ae179eaafd340c9b9ff02531d9bc747.jpg)
 
 ![](http://bkzs.sxu.edu.cn/images/2019-07/5705c1fa3e5e47dd976dd950eac891c4.jpg)
+`
