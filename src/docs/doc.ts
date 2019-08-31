@@ -13,6 +13,9 @@ import B5 from './doc/入学准备/物品准备'
 import C1 from './doc/校内生活/住在山大'
 import C2 from './doc/校内生活/便利生活'
 import C3 from './doc/校内生活/吃在山大'
+import C4 from './doc/校内生活/大型活动'
+import C5 from './doc/校内生活/多彩社团'
+import C6 from './doc/校内生活/学生组织'
 
 
 import D1 from './doc/校外生活/风景名胜'
@@ -55,7 +58,10 @@ export default [
         children: {
             '住在山大': C1,
             '便利生活': C2,
-            '吃在山大': C3
+            '吃在山大': C3,
+            '大型活动': C4,
+            '多彩社团': C5,
+            '学生组织': C6
         }
     },
     {
