@@ -20,6 +20,7 @@ body {
 .App {
   width: 100%;
   height: 100%;
+  background-color: #fff9e7;
 }
 
 .mask {
@@ -52,7 +53,7 @@ body {
 
 .fresh-sxu-headNav {
   display: flex;
-  height: 1.5rem;
+  height: 1.8rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -109,8 +110,9 @@ body {
 }
 
 .fresh-sxu-content {
-  font-size: .2rem;
+  font-size: .4rem;
   padding: .3rem;
+  background-color: #fff9e7;
 }
 
 .fresh-sxu-content-wrap button {

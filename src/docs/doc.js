@@ -23,6 +23,8 @@ import E1 from './doc/其他信息/学习建议'
 import E2 from './doc/其他信息/校园地图'
 import E3 from './doc/其他信息/自我提升'
 
+import F1 from './doc/关于我们/关于我们'
+
 
 
 export default [
@@ -40,7 +42,7 @@ export default [
         title: '入学准备',
         imgUrl: '',
         children: {
-            'QQ群': B1,
+            // 'QQ群': B1,
             '军训小贴士': B2,
             '到校方式': B3,
             '报到流程': B4,
@@ -74,4 +76,11 @@ export default [
             '自我提升': E3
         }
     },
+    {
+        title: '关于我们',
+        imgUrl: '',
+        children: {
+            '关于我们': F1
+        }
+    }
 ]
