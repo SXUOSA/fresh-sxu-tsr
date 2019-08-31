@@ -15,20 +15,24 @@ const HeadNav:React.FC<Partial<headNavProps>> = props => {
 
     return (
         <div className={"fresh-sxu-headNav"}>
-            <div style={{width: '100%'}}>
+            <div style={{width: '100%', height: '120%'}}>
             {
                 props.tabs?
                 props.tabs.map(tab => {
                     if (tab === props.selectedTab) {
                         return <button id={"selectedTab"}
                                        style = {{
-                                           width: props.tabs?`${100 / props.tabs.length}%`:'30%'
+                                        //    width: props.tabs?`${(100 / props.tabs.length)}%`:'30%',
+                                           fontSize: '0.35rem',
+                                           lineHeight: '30px'
                                        }}
                                        onClick={e => handleClick(e, tab)}>{tab}</button>;
                     }
                     return <button onClick={e => handleClick(e, tab)}
                                    style = {{
-                                       width: props.tabs?`${100 / props.tabs.length}%`:'30%'
+                                       width: props.tabs?`${100 / props.tabs.length}%`:'30%',
+                                       fontSize: '0.3rem',
+                                       lineHeight: '30px'
                                    }}>{tab}</button>;
                 }):
                 null

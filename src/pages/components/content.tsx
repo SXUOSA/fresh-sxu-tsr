@@ -12,7 +12,7 @@ const Content:React.FC<Partial<ContentProps>> = props => {
         <div style={{
             minHeight: '1200px'
         }}>
-            <div className={"fresh-sxu-content"} dangerouslySetInnerHTML={{__html:props.contentHtml?props.contentHtml:"<div></div>"}}></div>
+            <div className={"fresh-sxu-content text-content"} dangerouslySetInnerHTML={{__html:props.contentHtml?props.contentHtml:"<div></div>"}}></div>
             {props.showNextPage?<button onClick={props.onNextPage}>{props.nextPage}</button>:null}
         </div>
     )
