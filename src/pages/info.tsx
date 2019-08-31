@@ -8,6 +8,7 @@ import { RouterProps } from '_@types_react-router@5.0.3@@types/react-router';
 
 const markdown = require('markdown').markdown;
 
+
 interface InfoProps {
     docTitle: string
 }
@@ -60,7 +61,6 @@ const InfoPage:React.FC<InfoProps & RouterProps> = props => {
     };
 
     const handleNextPage = () => {};
-
     return (
         <div>
             <HeadInfo imgUrl={"http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg"} title="新生手册"/>
