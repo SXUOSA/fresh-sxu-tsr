@@ -48,12 +48,12 @@ const InfoPage:React.FC<InfoProps & RouterProps> = props => {
         }
     }
 
-    window.onscroll = function () {
-        var t = document.documentElement.scrollTop || document.body.scrollTop;
-        if (t === 0) {
-            props.history.push('/menu');
-        }
-    }
+    // window.onscroll = function () {
+    //     var t = document.documentElement.scrollTop || document.body.scrollTop;
+    //     if (t === 0) {
+    //         props.history.push('/menu');
+    //     }
+    // }
 
     const headNavClick = (e: React.MouseEvent, tab: string) => {
         setSelectTab(tab);

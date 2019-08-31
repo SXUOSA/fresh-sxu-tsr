@@ -21,7 +21,10 @@ const Menu:React.FC<RouterProps> = props => {
                 <ul>
                     {
                         Doc.map((doc: Doc, index: number) => {
-                            return <li onClick={e => handleClick(e, index)}>{doc.title}</li>
+                            return <li onClick={e => handleClick(e, index)}
+                                       style={{
+                                           fontSize: '24px'
+                                       }}>{doc.title}</li>
                         })
                     }
                 </ul>
