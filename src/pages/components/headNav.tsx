@@ -23,7 +23,7 @@ const HeadNav:React.FC<Partial<headNavProps>> = props => {
                         return <button id={"selectedTab"}
                                        style = {{
                                            width: props.tabs?`${(100 / props.tabs.length)}%`:'30%',
-                                           fontSize: '0.35rem',
+                                           fontSize: '0.3rem',
                                            lineHeight: '30px'
                                        }}
                                        onClick={e => handleClick(e, tab)}>{tab}</button>;

@@ -65,7 +65,7 @@ body {
 
 #selectedTab {
   color: black;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: all .5s;
 }
 
