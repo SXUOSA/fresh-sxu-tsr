@@ -19,9 +19,11 @@ interface docType {
 
 const getParamsFromQuery:(query:string, aim:string) => string = (query:string, aim:string) => {
     let result: {[index:string]:string} = {};
+    query = query.split('?')[1];
     let paramArray = query.split('');
-    paramArray.splice(0, 1);
-    let paramString = paramArray.join('');
+    let paramString = query;
+    // paramArray.splice(0, 1);
+    // let paramString = paramArray.join('');
     paramString.split('&').forEach(param => {
         let temp = param.split('=');
         result[temp[0] as string] = temp[1] as string;
@@ -30,7 +32,9 @@ const getParamsFromQuery:(query:string, aim:string) => string = (query:string, a
 };
 
 const InfoPage:React.FC<InfoProps & RouterProps> = props => {
-    let docs:[string, string][] = Doc[parseInt(getParamsFromQuery(window.location.search, 'index'))]['children'] as unknown as [string, string][];
+    let docs:[string, string][] = Doc[parseInt(getParamsFromQuery(window.location.hash, 'index'))]['children'] as unknown as [string, string][];
+    const [imgUrl, setImgUrl] = useState<string>(Doc[parseInt(getParamsFromQuery(window.location.hash, 'index'))].imgUrl)
+    const [title, setTitle] = useState<string>(Doc[parseInt(getParamsFromQuery(window.location.hash, 'index'))].title)
     docs = (Object.entries(docs) as unknown as [string, string][]);
     const [content, setContent] = useState<string>(markdown.toHTML(docs[0][1]));
     const [selectTab, setSelectTab] = useState<string>(docs[0][0]);
@@ -60,10 +64,11 @@ const InfoPage:React.FC<InfoProps & RouterProps> = props => {
         setContent(markdown.toHTML(findDoc(tab)));
     };
 
+
     const handleNextPage = () => {};
     return (
         <div>
-            <HeadInfo imgUrl={"http://bkzs.sxu.edu.cn/images/2019-07/35982080e0bc4df88657e01e05e7c20b.jpg"} title="新生手册"/>
+            <HeadInfo imgUrl={imgUrl} title={title}/>
             <HeadNav tabs={tabs}
                      selectedTab={selectTab}
                      onClick={(e:React.MouseEvent, tab:string) => {headNavClick(e, tab)}}/>

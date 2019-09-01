@@ -26,6 +26,15 @@ const IndexPage:React.FC<RouterProps> = props => {
                 }} src="http://bkzs.sxu.edu.cn/images/2019-07/25bf5b5aabbd4037857b86811838ec62.png" alt=""/>
             </div>
             <button className={'openHandBook'} onClick={() => {props.history.push('/menu')}}>打开手册</button>
+            <p style={{
+                position: 'absolute',
+                bottom: '1rem',
+                textAlign: 'center',
+                zIndex: 1,
+                width: '100%',
+                color: 'white',
+                fontSize: '14px'
+            }}>山西大学计算机与信息技术学院-开源软件协会出品</p>
         </div>
     )
 }

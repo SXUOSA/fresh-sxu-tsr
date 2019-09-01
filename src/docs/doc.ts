@@ -25,6 +25,7 @@ import D3 from './doc/校外生活/周边商圈'
 import E1 from './doc/其他信息/学习建议'
 import E2 from './doc/其他信息/校园地图'
 import E3 from './doc/其他信息/自我提升'
+import E4 from './doc/其他信息/图书馆'
 
 import F1 from './doc/关于我们/关于我们'
 
@@ -33,7 +34,7 @@ import F1 from './doc/关于我们/关于我们'
 export default [
     {
         title: '走进山大',
-        imgUrl: '',
+        imgUrl: 'http://bkzs.sxu.edu.cn/images/2019-07/08b0fdfd58ea4cd1a27e0005c97bd04b.jpg',
         children: {
             '百年山大': A1,
             '大东关篇': A2,
@@ -43,7 +44,7 @@ export default [
     },
     {
         title: '入学准备',
-        imgUrl: '',
+        imgUrl: 'http://bkzs.sxu.edu.cn/images/2019-07/d88f160d4fa045b6be772e0293b8e6b0.png',
         children: {
             // 'QQ群': B1,
             '军训小贴士': B2,
@@ -54,7 +55,7 @@ export default [
     },
     {
         title: '校内生活',
-        imgUrl: '',
+        imgUrl: 'http://bkzs.sxu.edu.cn/images/2019-07/a74bf07dd058456f9215d79e60e835fa.png',
         children: {
             '住在山大': C1,
             '便利生活': C2,
@@ -66,7 +67,7 @@ export default [
     },
     {
         title: '校外生活',
-        imgUrl: '',
+        imgUrl: 'http://bkzs.sxu.edu.cn/images/2019-07/c38dd82d48374d23960bc1c409fa2d63.jpg',
         children: {
             '风景名胜': D1,
             '服务网点': D2,
@@ -75,16 +76,17 @@ export default [
     },
     {
         title: '其他信息',
-        imgUrl: '',
+        imgUrl: 'http://bkzs.sxu.edu.cn/images/2019-07/3ee008edc30a4e709dff116ea7adcfd3.jpg',
         children: {
             '学习建议': E1,
             '校园地图': E2,
-            '自我提升': E3
+            '自我提升': E3,
+            '图书馆': E4
         }
     },
     {
         title: '关于我们',
-        imgUrl: '',
+        imgUrl: 'http://bkzs.sxu.edu.cn/images/2019-07/a79806ff9ab54b1ea6f084ac6906cf7c.jpg',
         children: {
             '关于我们': F1
         }
